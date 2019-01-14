@@ -1,11 +1,14 @@
 ## Kubernetes Cook Book 
 Kubernetes is made up of the following components:
 
-Kubernetes master
+Kubernetes master 
+
 Kubernetes nodes
+
 etcd
+
 Kubernetes network
-These components are connected via a network, as shown in the following diagram:
+
 
 
 
