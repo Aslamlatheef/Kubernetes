@@ -40,3 +40,10 @@ The scheduler helps to choose which container runs on which nodes. It is a simpl
 - CPU
 - Memory
 - How many containers are running?
+
+### Controller manager (kube-controller-manager)
+The controller manager performs cluster operations. For example:
+
+Manages Kubernetes nodes
+Creates and updates the Kubernetes internal information
+Attempts to change the current status to the desired status
