@@ -33,3 +33,10 @@ In addition, the Kubernetes command-line interface, kubect can control the Kuber
 
 ### API server (kube-apiserver)
 The API server provides an HTTP- or HTTPS-based RESTful API, which is the hub between Kubernetes components, such as kubectl, the scheduler, the replication controller, the etcd data store, the kubelet and kube-proxy, which runs on Kubernetes nodes, and so on.
+
+### Scheduler (kube-scheduler)
+The scheduler helps to choose which container runs on which nodes. It is a simple algorithm that defines the priority for dispatching and binding containers to nodes. For example:
+
+- CPU
+- Memory
+- How many containers are running?
