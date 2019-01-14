@@ -53,3 +53,13 @@ After you install the Kubernetes master, you can use the Kubernetes command-line
 
 (full reference guide)[https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands] 
 
+### Kubernetes node
+The Kubernetes node is a slave node in the Kubernetes cluster. It is controlled by the Kubernetes master to run container applications using Docker (http://docker.com) or rkt (http://coreos.com/rkt/docs/latest/). In this book, we will use the Docker container runtime as the default engine.
+
+Node or slave?
+The term slave is used in the computer industry to represent the cluster worker node; however, it is also associated with discrimination. The Kubernetes project uses minion in the early version and node in the current version.
+
+The following diagram displays the role and tasks of daemon processes in the node:
+![alt text](https://github.com/Aslamlatheef/Kubernetes/blob/master/Images/images.png)
+
+
