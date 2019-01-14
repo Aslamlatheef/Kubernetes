@@ -66,8 +66,22 @@ The following diagram displays the role and tasks of daemon processes in the nod
 ### kubelet
 kubelet is the main process on the Kubernetes node that communicates with the Kubernetes master to handle the following operations:
 
-Periodically accesses the API controller to check and report
-Performs container operations
-Runs the HTTP server to provide simple APIs
+- Periodically accesses the API controller to check and report
+- Performs container operations
+- Runs the HTTP server to provide simple APIs
 
+### Kube Proxy (kube-proxy)
+The proxy handles the network proxy and load balancer for each container. It changes Linux iptables rules (nat table) to control TCP and UDP packets across the containers.
+
+After starting the kube-proxy daemon, it configures iptables rules; you can use iptables -t nat -L or iptables -t nat -S to check the nat table rule
+
+### etcd
+etcd (https://coreos.com/etcd/) is the distributed key-value data store. It can be accessed via the RESTful API to perform CRUD operations over the network. Kubernetes uses etcd as the main data store.
+
+You can explore the Kubernetes configuration and status in etcd (/registry) using the curl command
+
+### Kubernetes network
+Network communication between containers is the most difficult part. Because Kubernetes manages multiple nodes (hosts) running several containers, those containers on different nodes may need to communicate with each other.
+
+If the container's network communication is only within a single node, you can use Docker network or Docker compose to discover the peer. However, along with multiple nodes, Kubernetes uses an overlay network or container network interface (CNI) to achieve multiple container communication.
 
