@@ -95,20 +95,5 @@ $ ifconfig -a
 // check the product UUID on your host
 $ sudo cat /sys/class/dmi/id/product_uuid
 - Every node has a different hostname: If the hostname is duplicated, the Kubernetes system may collect logs or statuses from multiple nodes into the same one.
-- *Docker is installed* As mentioned previously, the Kubernetes master will run its daemon as a container, and every node in the cluster should get Docker installed. For how to perform the Docker installation, you can follow the steps on the official website: (Ubuntu: https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/, and CentOS: https://docs.docker.com/engine/installation/linux/docker-ce/centos/) Here we have Docker CE 17.06 installed on our machines; however, only Docker versions 1.11.2 to 1.13.1, and 17.03.x are verified with Kubernetes version 1.10.
-Network ports are available: The Kubernetes system services need network ports for communication. The ports in the following table should now be occupied according to the role of the node:
-Node role	Ports	System service
-Master	|6443	Kubernetes API server
-10248/10250/10255	kubelet local healthz endpoint/Kubelet API/Heapster (read-only)
-10251	kube-scheduler
-10252	kube-controller-manager
-10249/10256	kube-proxy
-2379/2380	etcd client/etcd server communication
-Node	| 10250/10255	Kubelet API/Heapster (read-only)
-30000~32767	Port range reserved for exposing container service to outside world
-
-The Linux command, netstat, can help to check if the port is in use or not:
-
-// list every listening port
-$ sudo netstat -tulpn | grep LISTEN
-Network tool packages are installed. ethtool and ebtables are two required utilities for kubeadm. They can be download and installed by theapt-get or yumpackage managing tools.
+- *Docker is installed* [https://www.docker.com] for installation 
+-Networking requirements : [https://github.com/coreos/coreos-kubernetes/blob/master/Documentation/kubernetes-networking.md]
