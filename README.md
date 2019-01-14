@@ -1,13 +1,13 @@
 ## Kubernetes Cook Book 
 Kubernetes is made up of the following components:
 
-Kubernetes master 
+- Kubernetes master 
 
-Kubernetes nodes
+- Kubernetes nodes
 
-etcd
-
-Kubernetes network
+- etcd
+![alt text](https://github.com/Aslamlatheef/Kubernetes/blob/master/Images/kubernetes-architecture.png)
+- Kubernetes network
 
 Kubernetes master: It connects to etcd via HTTP or HTTPS to store the data
 
