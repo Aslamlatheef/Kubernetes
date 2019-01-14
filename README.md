@@ -47,3 +47,9 @@ The controller manager performs cluster operations. For example:
 Manages Kubernetes nodes
 Creates and updates the Kubernetes internal information
 Attempts to change the current status to the desired status
+
+### Command-line interface (kubectl)
+After you install the Kubernetes master, you can use the Kubernetes command-line interface, kubectl, to control the Kubernetes cluster. For example, kubectl get cs returns the status of each component. Also, kubectl get nodes returns a list of Kubernetes nodes:
+
+(full reference guide)[https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands] 
+
