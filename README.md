@@ -60,6 +60,14 @@ Node or slave?
 The term slave is used in the computer industry to represent the cluster worker node; however, it is also associated with discrimination. The Kubernetes project uses minion in the early version and node in the current version.
 
 The following diagram displays the role and tasks of daemon processes in the node:
+
 ![alt text](https://github.com/Aslamlatheef/Kubernetes/blob/master/Images/images.png)
+
+### kubelet
+kubelet is the main process on the Kubernetes node that communicates with the Kubernetes master to handle the following operations:
+
+Periodically accesses the API controller to check and report
+Performs container operations
+Runs the HTTP server to provide simple APIs
 
 
