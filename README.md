@@ -18,11 +18,11 @@ Kubernetes network: It L2, L3 or overlay make a connection of their container ap
 ### Kubernetes master
 The Kubernetes master is the main component of the Kubernetes cluster. It serves several functionalities, such as the following:
 
-1.Authorization and authentication
-2.RESTful API entry point
-3.Container deployment scheduler to Kubernetes nodes
-4.Scaling and replicating controllers
-5.Reading the configuration to set up a cluster
+1 Authorization and authentication
+2 RESTful API entry point
+3 Container deployment scheduler to Kubernetes nodes
+4 Scaling and replicating controllers
+5 Reading the configuration to set up a cluster
 
 ![alt text](https://github.com/Aslamlatheef/Kubernetes/blob/master/Images/d05d8b65-158f-4a4b-8a4c-b9cf00ef1133.jpg)
 
