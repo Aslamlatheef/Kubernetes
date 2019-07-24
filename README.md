@@ -104,9 +104,12 @@ $ sudo cat /sys/class/dmi/id/product_uuid
 
 The target audience for this tutorial is someone planning to support a production Kubernetes cluster and wants to understand how everything fits together.
 
+
+## Hard way of kubernetes - indepth 
+
 ## Cluster Details
 
-Kubernetes The Hard Way guides you through bootstrapping a highly available Kubernetes cluster with end-to-end encryption between components and RBAC authentication.
+Kubernetes guides you through bootstrapping a highly available Kubernetes cluster with end-to-end encryption between components and RBAC authentication.
 
 * [Kubernetes](https://github.com/kubernetes/kubernetes) 1.12.0
 * [containerd Container Runtime](https://github.com/containerd/containerd) 1.2.0-rc.0
