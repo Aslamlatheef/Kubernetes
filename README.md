@@ -87,6 +87,7 @@ If the container's network communication is only within a single node, you can u
 
  ## INSTALLATION
 1 Ubuntu Xenial 16.04 (LTS)
+
 2 CentOS 7.4
 - Make sure the OS version is matched before continuing. 
 - *Every node has a unique MAC address and product UUID*: Some plugins use the MAC address or product UUID as a unique machine ID to identify nodes (for example, kube-dns). If they are duplicated in the cluster, kubeadm may not work while starting the plugin:
