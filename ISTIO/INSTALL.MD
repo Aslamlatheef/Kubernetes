@@ -1,5 +1,5 @@
 # ISTIO ARCHITECTURE
-[first read the url so that you get the complete idea istio then proceed with installation and understanding](https://itnext.io/istio-service-mesh-the-step-by-step-guide-adf6da18bb9a)
+[first read this url so that you get the complete idea istio then proceed with installation and understanding](https://itnext.io/istio-service-mesh-the-step-by-step-guide-adf6da18bb9a)
 
 ## Core Components
 ### Envoy
