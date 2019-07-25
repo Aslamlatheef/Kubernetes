@@ -78,3 +78,8 @@ docker-compose -f ./istio-1.0.6/samples/bookinfo/platform/consul/bookinfo.yaml u
 ```
 docker-compose -f ./istio-1.0.6/samples/bookinfo/platform/consul/bookinfo.sidecars.yaml up -d
 ```
+
+## Installing Istio on kubernetes
+
+since the version are keep on changing, please refer below for latest installation document 
+[installation of istio on kubernetes](https://istio.io/docs/setup/kubernetes/)
