@@ -83,3 +83,28 @@ docker-compose -f ./istio-1.0.6/samples/bookinfo/platform/consul/bookinfo.sideca
 
 since the version are keep on changing, please refer below for latest installation document 
 [installation of istio on kubernetes](https://istio.io/docs/setup/kubernetes/)
+
+## istio logging
+
+This is the Nginx configuration, located at /etc/nginx/sites-enabled/default:
+```
+server {
+listen 80 default_server;
+listen [::]:80 default_server;
+root /var/www/html;
+index index.html index.htm index.nginx-debian.html;
+server_name _;  
+#location / {proxy_pass  http://127.0.0.1:9090;}
+location / {proxy_pass  http://127.0.0.1:3000;}
+}
+```
+There are also 2 commands that are used to forward the ports.
+
+The command to forward the ports for Prometheus:
+```
+kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=prometheus -o jsonpath='{.items[0].metadata.name}') 9090:9090 &
+```
+The command the forward the port for Grafana:
+```
+kubectl -n istio-system port-forward $(kubectl -n istio-system get pod -l app=grafana -o jsonpath='{.items[0].metadata.name}') 3000:3000 &
+```
