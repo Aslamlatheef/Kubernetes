@@ -1,4 +1,17 @@
 # ISTIO ARCHITECTURE
+## Core Components
+### Envoy
+
+Envoy is an open-source extension and service proxy provider, built for cloud-extensive meshes. The Istio mesh creates an extendible proxy system through Envoy.
+
+### Mixer
+
+The mixer is a part of the service mesh that helps in enforcing safety protocols, allowing access controls and implementing usage policies and works independently from the mesh.
+
+### Pilot
+
+Pilot provides all services for the Istio Envoy sidecars and allows for a more coherent traffic management system with high level routing.
+
 
 ## ISTIO WITH DOCKER
 
