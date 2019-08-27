@@ -20,3 +20,7 @@ subjects:
 - kind: ServiceAccount
   name: tiller
   namespace: kube-system
+
+
+# kubectl apply -f helm-rbac.yaml
+# helm init --service-account=tiller
